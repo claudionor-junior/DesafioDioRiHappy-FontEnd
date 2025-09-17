@@ -1,0 +1,291 @@
+:root {
+    --color-primary: #4FB6E2;
+    --color-secondary: #1472B7;
+    --color-light: #fff;
+    --color-dark: #252525;
+    --color-darker: #1c1c1c;
+    --color-transparent-primary: rgba(79, 182, 226, 0.2);
+    --spacing-xs: 5px;
+    --spacing-s: 10px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-l);
+}
+
+p {
+    color: var(--color-light);
+    line-height: 1.5; /* Melhoria para legibilidade */
+}
+
+/* Container de conteúdo padrão para as seções */
+.content-container {
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.banner {
+    position: relative;
+    height: auto;
+    min-height: 500px;
+    padding: 50px 15px;
+    border-bottom: 1px solid var(--color-transparent-primary);
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/img-fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.banner .banner-content {
+    color: var(--color-light);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.banner p {
+    font-size: 1rem;
+    margin: var(--spacing-m) 0 var(--spacing-l);
+}
+
+.banner video {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: var(--spacing-xl);
+    border-radius: 50%;
+}
+
+.call-to-action-button {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: var(--spacing-m) var(--spacing-xl);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    margin-bottom: 30px;
+    border: 2px solid var(--color-primary);
+    border-radius: 30px;
+    text-decoration: none; 
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.call-to-action-button:hover, .call-to-action-button:focus {
+    color: var(--color-light);
+    background-color: var(--color-transparent-primary);
+    transform: scale(1.05); 
+    outline: none;
+}
+
+#course-content .modules-list {
+    margin: var(--spacing-l) 0;
+}
+
+#course-content .modules-list .module {
+    color: var(--color-light);
+    max-width: 530px;
+    width: 90%;
+    margin: 0 auto var(--spacing-l);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-dark);
+    padding: var(--spacing-m);
+    border-radius: 100px;
+    box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+    transition: transform 0.3s ease;
+}
+
+#course-content .modules-list .module:hover, #course-content .modules-list .module:focus {
+    transform: scale(1.05);
+}
+
+#course-content .modules-list .module span {
+    color: var(--color-primary);
+}
+
+#transform-world {
+    height: auto;
+    min-height: 400px;
+    background-image: url("images/woman-code.png");
+    background-size: cover;
+    background-attachment: scroll; /* Desabilita o parallax em mobile */
+    background-position: center;
+    border-top: 1px solid var(--color-transparent-primary);
+    border-bottom: 1px solid var(--color-transparent-primary);
+    padding: 50px 15px;
+}
+
+#transform-world p {
+    font-weight: 900;
+    font-size: 1.75rem;
+    text-transform: lowercase;
+    max-width: 250px;
+    text-shadow: 3px 2px var(--color-primary);
+}
+
+#professional-challenges img {
+    margin: var(--spacing-xl) 0;
+    max-width: 100%;
+    height: auto;
+}
+
+#subscribe-form {
+    background-color: var(--color-darker);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#subscribe-form h2 {
+    margin-bottom: 20px;
+}
+
+#subscribe-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#subscribe-form label {
+    display: block;
+    color: var(--color-light);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#subscribe-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+#subscribe-form input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+#subscribe-form button {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#subscribe-form button:hover, #subscribe-form button:focus {
+    background-color: var(--color-secondary);
+    outline: 2px solid var(--color-light);
+    outline-offset: 2px;
+}
+
+footer {
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(79, 182, 226, 0), var(--color-transparent-primary));
+    border-top: 1px solid var(--color-transparent-primary);
+}
+
+footer .dio-logo {
+    width: 300px;
+}
+
+footer a {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- Breakpoints --- */
+
+/* Tablet e Telas menores de desktop */
+@media (min-width: 769px) {
+    .content-container {
+        max-width: 800px;
+    }
+    .banner h1 {
+        font-size: 2.25rem;
+    }
+    .banner p {
+        font-size: 1.25rem;
+    }
+    .banner video {
+        width: 300px;
+        height: 300px;
+    }
+    #transform-world p {
+        font-size: 2.25rem;
+    }
+}
+
+/* Desktop e Telas grandes */
+@media (min-width: 1025px) {
+    .content-container {
+        max-width: 1000px;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .banner p {
+        font-size: 1.5rem;
+    }
+    .banner video {
+        width: 360px;
+        height: 360px;
+    }
+    #transform-world {
+        background-attachment: fixed;
+        min-height: 560px;
+        padding: 200px 15px;
+    }
+    #transform-world p {
+        font-size: 2.5rem;
+    }
+}
